@@ -11,7 +11,7 @@ interface RepositoryComponentTypes {
   item: RepositoryType
 }
 
-const RepositoryComponent = (props: RepositoryComponentTypes) => {
+export const RepositoryComponent = (props: RepositoryComponentTypes) => {
   const { item } = props
 
   return (
@@ -103,7 +103,6 @@ const UserPanelComponent = (props: UserPanelComponentTypes) => {
 const App = () => {
   const [keyword, setKeyword] = useState<string>("")
   const [error, setError] = useState<string>("")
-  // const queryClient = useQueryClient()
 
   const { data: dataUser, isLoading, refetch, status, isFetching } = useQuery({
     queryKey: ["users"],
@@ -112,8 +111,6 @@ const App = () => {
     refetchOnWindowFocus: false,
     refetchOnMount: false,
   })
-
-  console.log(dataUser)
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
