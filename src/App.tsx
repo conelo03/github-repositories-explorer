@@ -129,7 +129,7 @@ const App = () => {
 
   const handleClick = () => {
     setError("")
-    if (keyword.trim()) {
+    if (!keyword.trim()) {
       setError("Please enter at least 1 character")
       return
     }
