@@ -21,6 +21,13 @@ The app allows users to:
 
 ---
 
+## 🎥 Demo
+
+### Live Preview
+[![Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=github)](https://github-repositories-explorer-ebon.vercel.app/)
+
+---
+
 ## 🛠️ Tech Stack
 
 - [React 19](https://react.dev/)
