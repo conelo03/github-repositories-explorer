@@ -40,3 +40,63 @@ The app allows users to:
 ```bash
 git clone https://github.com/your-username/github-repos-explorer.git
 cd github-repos-explorer
+````
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Setup GitHub API Token (optional but recommended)
+
+Create a **`.env`** file in the root:
+
+```env
+VITE_GITHUB_TOKEN=your_personal_access_token
+```
+
+> 🔑 You can generate a GitHub token from [GitHub Developer Settings](https://github.com/settings/tokens).
+> If no token is provided, the app will still work but might hit GitHub’s rate limits (60 requests/hour).
+
+### 4. Run the dev server
+
+```bash
+npm run dev
+```
+
+Visit: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🧪 Running Tests
+
+This project uses **Vitest** + **React Testing Library**.
+
+```bash
+npm run test
+```
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── App.tsx                 # Main app component
+├── services/
+│   │── apiClient.ts        # API Instance (Axios)
+│   └── github.service.ts   # API requests (users & repos)
+├── interfaces/
+│   └── global.interface.ts # TypeScript interfaces
+├── utils/
+│   └── helper.ts           # Helper
+├── __tests__/              # Unit tests (Vitest + RTL)
+│   └── App.test.tsx
+```
+
+---
+
+## 📜 License
+
+MIT © 2025 Muhamad Ramadhan

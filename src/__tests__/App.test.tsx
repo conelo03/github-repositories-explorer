@@ -1,11 +1,11 @@
 import { describe, it, expect, vi, beforeEach } from "vitest"
 import { render, screen, fireEvent, waitFor } from "@testing-library/react"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import App, { RepositoryComponent } from "./App"
-import * as githubService from "./services/github.service"
-import type { RepositoryType } from "./interfaces/global.inteface"
+import App, { RepositoryComponent } from "../App"
+import * as githubService from "../services/github.service"
+import type { RepositoryType } from "../interfaces/global.inteface"
 
-vi.mock("./services/github.service", () => ({
+vi.mock("../services/github.service", () => ({
   getUsersList: vi.fn(),
   getReposList: vi.fn(),
 }))
